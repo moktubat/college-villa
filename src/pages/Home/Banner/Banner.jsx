@@ -49,7 +49,7 @@ const Banner = () => {
             alt="image 2"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
+          <div className="absolute text-right pr-12 md:pr-20 lg:pr-32 pb-12 md:pb-20 lg:pb-32 inset-0 grid h-full w-full place-items-end bg-black/75">
             <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
               <Typography
                 variant="h1"
@@ -65,7 +65,7 @@ const Banner = () => {
               >
                 Education&apos;s key role in achieving success is undeniable. The forest&apos;s allure extends beyond aesthetics, paralleling the depth of knowledge we offer. Embrace growth – start your learning journey today.
               </Typography>
-              <div className="flex gap-2">
+              <div className="flex gap-2 lg:pl-64">
                 <Button size="lg" color="white">
                   Explore
                 </Button>

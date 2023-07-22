@@ -1,9 +1,12 @@
 import React from "react";
+import logo from "../../../assets/logo.webp";
 import {
   Navbar,
   MobileNav,
   Typography,
   IconButton,
+  Input,
+  Button,
 } from "@material-tailwind/react";
 
 const NavBar = () => {
@@ -25,7 +28,7 @@ const NavBar = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Home
+          Home
         </a>
       </Typography>
       <Typography
@@ -35,7 +38,7 @@ const NavBar = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Colleges
+          Colleges
         </a>
       </Typography>
       <Typography
@@ -45,7 +48,7 @@ const NavBar = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Admission
+          Admission
         </a>
       </Typography>
       <Typography
@@ -55,22 +58,39 @@ const NavBar = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-        Sign-In
+          Sign-In
         </a>
       </Typography>
     </ul>
   );
   return (
     <>
-      <Navbar className="sticky bg-blend-overlay top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
+      <Navbar className="sticky bg-blend-overlay top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 shadow-xl">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            College Villa
+            <img
+            className="w-40"
+              alt="college villa"
+              src={logo}
+            />
           </Typography>
+          <div className="relative flex w-full gap-2 md:w-max">
+          <Input
+            type="search"
+            label="Type here..."
+            className="pr-20"
+            containerProps={{
+              className: "min-w-[288px]",
+            }}
+          />
+          <Button size="sm" color="indigo" className="!absolute right-1 top-1 rounded">
+            Search
+          </Button>
+        </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton

@@ -1,119 +1,148 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+import { User } from "../../hook/user";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../provider/AuthProvider";
-import Swal from "sweetalert2";
-import SocialLogin from "../Shared/SocialLogin/SocialLogin";
-import useTitle from "../../hook/useTitel";
 
 const Login = () => {
-  useTitle("Login");
-  const { signIn } = useContext(AuthContext);
+  const { googleLoginUser, githubLoginUser, loginUser, resetPassword } =
+    useContext(AuthContext);
+
   const navigate = useNavigate();
   const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
-  const from = location.state?.from?.pathnam || "/";
+  const emailRef = useRef();
 
   const {
-    register,
     handleSubmit,
+    register,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
-      await new Promise((resolve) => {
-        signIn(data.email, data.password);
-        resolve();
-      });
-
-      const user = signIn(data.email, data.password);
-      console.log(user);
-
-      Swal.fire({
-        icon: "success",
-        title: "Login successful",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+  const onSubmit = (data) => {
+    loginUser(data.email, data.password).then((result) => {
+      console.log(result.user);
       navigate(from, { replace: true });
-    } catch (error) {
-      console.log(error);
-    }
+    });
+    console.log(data);
+  };
+
+  const handleGoogleUser = () => {
+    googleLoginUser().then((result) => {
+      User(result.user, result.user.photoURL);
+      navigate(from, { replace: true });
+      console.log(result.user);
+    });
+  };
+
+  const handleGithubUser = () => {
+    githubLoginUser().then((result) => {
+      navigate(from, { replace: true });
+      console.log(result.user);
+    });
+  };
+
+  const handleResetPassword = () => {
+    const email = emailRef.current.value;
+    resetPassword(email).then(() => {
+      alert("Please Check your Email");
+    });
   };
 
   return (
-    <div>
-      <div className="hero min-h-screen bg-gray-500">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left text-white">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              For learn your personal self-defence in unique way, come to join
-              us.
-            </p>
+    <div className="grid grid-cols-2">
+      <div>
+        <img
+          className="h-[calc(100vh-97px)] object-cover"
+          src="https://i.ibb.co/7S4Z6m5/people-6027028-1280.jpg"
+          alt=""
+        />
+      </div>
+      <div className="mx-20 mt-8 p-6 border border-gray-300 rounded">
+        <h2 className="text-2xl font-bold mb-4">Login</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {/* Email */}
+          <div className="mb-4">
+            <label htmlFor="email" className="block mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              ref={emailRef}
+              {...register("email", {
+                required: "Email is required",
+              })}
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#242323] font-semibold">
-            <SocialLogin></SocialLogin>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-white font-bold">Email</span>
-                </label>
-                <input
-                  type="email"
-                  {...register("email", { required: true })}
-                  name="email"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-                {errors.email && (
-                  <span className="text-red-600 py-1 ps-1 font-semibold ">
-                    Wrong Email
-                  </span>
-                )}
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-white font-bold">
-                    Password
-                  </span>
-                </label>
-                <input
-                  type="password"
-                  {...register("password", { required: true })}
-                  name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                {errors.password && (
-                  <span className="text-red-600 py-1 ps-1 font-semibold ">
-                    Wrong Password
-                  </span>
-                )}
-                <label className="label">
-                  <a href="#" className="label-text-alt  text-white pt-4">
-                    Forgot password?
-                  </a>
-
-                  <Link
-                    to="/register"
-                    className="label-text-alt  text-white pt-4"
-                  >
-                    Register
-                  </Link>
-                </label>
-              </div>
-              <div className="form-control mt-3">
-                <input
-                  className="btn btn-primary"
-                  type="submit"
-                  value="Login"
-                />
-              </div>
-            </form>
+          {/* Password */}
+          <div className="mb-4">
+            <label htmlFor="password" className="block mb-1">
+              Password
+            </label>
+            <input
+              {...register("password", {
+                required: "Password is required",
+              })}
+              type="password"
+              id="password"
+              className="w-full p-2 border border-gray-300 rounded"
+            />
+            {errors.password && (
+              <p className="text-red-500">{errors.password.message}</p>
+            )}
           </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          >
+            Login
+          </button>
+        </form>
+
+        <div className="mt-4 flex gap-3">
+          <button
+            onClick={handleGoogleUser}
+            className="border flex gap-3 items-center py-2 px-4 rounded mr-2"
+          >
+            <FcGoogle /> Sign Up with Google
+          </button>
+          <button
+            onClick={handleGithubUser}
+            className="bg-black flex gap-3 items-center text-white py-2 px-4 rounded hover:bg-gray-800"
+          >
+            <FaGithub /> Sign Up with GitHub
+          </button>
+        </div>
+
+        {/* Reset Password Button */}
+        <div className="mt-4">
+          <button
+            onClick={handleResetPassword}
+            className="bg-gray-300 text-black py-2 px-4 rounded hover:bg-gray-400"
+          >
+            Reset Password
+          </button>
+        </div>
+
+        {/* Link to Register Page */}
+        <div className="mt-4">
+          <Link
+            to="/register" // Replace with the link to your register page
+            className="text-blue-500 hover:underline"
+          >
+            Don't have an account? Register here
+          </Link>
         </div>
       </div>
     </div>

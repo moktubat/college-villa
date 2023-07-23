@@ -13,19 +13,19 @@ const Gallery = () => {
       <div className=" mx-auto px-5 py-2 lg:px-32">
   <div className="-m-1 flex flex-wrap md:-m-2">
     <div className="flex w-1/2 flex-wrap">
-      <div className="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="https://i.ibb.co/r58xdk6/istockphoto-844818242-612x612.jpg" />
       </div>
-      <div className="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="https://i.ibb.co/kJyRRNM/istockphoto-482362583-612x612.jpg" />
       </div>
-      <div className="w-full p-1 md:p-2">
+      <div className="w-full p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
@@ -33,19 +33,19 @@ const Gallery = () => {
       </div>
     </div>
     <div className="flex w-1/2 flex-wrap">
-      <div className="w-full p-1 md:p-2">
+      <div className="w-full p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="https://i.ibb.co/9yXdYDg/pexels-pixabay-267885.jpg" />
       </div>
-      <div className="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="https://i.ibb.co/D7YZ1PY/2017-04-provgrad2.jpg" />
       </div>
-      <div className="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2 transition-transform duration-500 transform ease-in-out hover:scale-110">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"

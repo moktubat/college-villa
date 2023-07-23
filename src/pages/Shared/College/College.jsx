@@ -1,7 +1,14 @@
 import { Button } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const College = ({ college }) => {
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
   const {
+    _id,
     collegeImage,
     collegeName,
     admissionDates,
@@ -9,10 +16,29 @@ const College = ({ college }) => {
     researchHistory,
     sports,
   } = college;
+  const handleDetails = () => {
+    if (!user) {
+      Swal.fire({
+        title: "Please login first",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#159A9C",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          console.log("hello world");
+          navigate("/login");
+        }
+      });
+    } else {
+      navigate(`/college/${_id}`);
+    }
+  };
   return (
     <div className="relative mx-auto w-full">
       <div className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full">
-      <div className="shadow p-4 rounded-lg bg-white md:h-96"> 
+        <div className="shadow p-4 rounded-lg bg-white md:h-96">
           <div className="flex justify-center relative rounded-lg overflow-hidden h-52">
             <div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">
               <div className="absolute">
@@ -22,9 +48,7 @@ const College = ({ college }) => {
           </div>
 
           <div className="mt-4">
-            <h2 className="font-medium text-base md:text-2xl">
-              {collegeName}
-            </h2>
+            <h2 className="font-medium text-base md:text-2xl">{collegeName}</h2>
             <p className="mt-2 text-gray-900">{researchHistory}</p>
           </div>
 
@@ -36,7 +60,7 @@ const College = ({ college }) => {
 
           <div className="grid grid-cols-1 mt-8">
             <div className="mt-auto">
-              <a href="#buttons-with-link">
+              <a onClick={handleDetails}>
                 <Button color="red" size="lg" fullWidth={true}>
                   Details
                 </Button>

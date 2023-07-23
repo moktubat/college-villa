@@ -8,10 +8,16 @@ import {
   Input,
   Button,
 } from "@material-tailwind/react";
+import useAuth from "../../../hook/useAuth";
 
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
-
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -37,7 +43,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="colleges" className="flex items-center">
           Colleges
         </a>
       </Typography>
@@ -47,7 +53,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="admission" className="flex items-center">
           Admission
         </a>
       </Typography>
@@ -57,10 +63,35 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
+        <a href="admission" className="flex items-center">
+          My College
+        </a>
+      </Typography>
+      {user ? (
+            <div className="flex items-center gap-3">
+              <Typography to="/profile" className="hover:text-gray-800 cursor-pointer">{user?.displayName}</Typography>
+              <ul>
+                <Typography
+                  onClick={handleLogOut}
+                  className="bg-[#159A9C] text-white py-2 px-5 rounded-md hover:text-gray-200"
+                >
+                  Logout
+                </Typography>
+              </ul>
+            </div>
+          ) : (
+            <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
         <a href="login" className="flex items-center">
           Sign-In
         </a>
       </Typography>
+          )}
+      
     </ul>
   );
   return (

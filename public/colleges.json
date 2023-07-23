@@ -1,0 +1,234 @@
+[
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b8d",
+        "collegeImage": "https://gerarimages.sarsworld.eu/content/uploads/2018/07/Universite-de-Milan.jpg",
+        "collegeName": "University of Milan",
+        "admissionDates": "Admission Deadline: 2023-10-01",
+        "events": "Career Fair: 2023-09-20",
+        "researchHistory": "Renowned for cutting-edge research in Physics.",
+        "sports": "Swimming, Basketball, Hockey",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Marco Rossi",
+            "comment": "Top-notch Physics department. Professors are brilliant and supportive. State-of-the-art research facilities make learning a fascinating experience!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Elena Bianchi",
+            "comment": "Impressive research opportunities. Campus environment is vibrant and diverse. Enjoyed attending career fair, connecting with industry professionals.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Francesco Russo",
+            "comment": "Thriving academic community. Innovative projects foster critical thinking. Great sports options, especially love the swimming and basketball facilities.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b8e",
+        "collegeImage": "https://univerlist.com/media/images/blog/892524-italy-temples-sky-lawn-piazza-dei-miracoli-pisa-cities-2.jpg",
+        "collegeName": "University of Pisa",
+        "admissionDates": "Admission Deadline: 2023-09-30",
+        "events": "Campus Tour: 2023-09-18",
+        "researchHistory": "Innovative research in Environmental Sciences.",
+        "sports": "Tennis, Cricket, Badminton",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Laura Ferrari",
+            "comment": "Environmentally conscious institution. Professors are knowledgeable and passionate. Engaging campus tour showcased cutting-edge research in Environmental Sciences!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Giuseppe Moretti",
+            "comment": "Impressed by the focus on sustainability. Campus events are diverse and enriching. Enjoyed playing tennis and cricket in my free time.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Sofia Conti",
+            "comment": "Great research opportunities in Environmental Sciences. Campus has a friendly atmosphere. Badminton club is a fun way to stay active.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b8c",
+        "collegeImage": "https://brescia.uwo.ca/communications/img/wallpaper/buc_wallpaper_desktop_01.jpg",
+        "collegeName": "University of Padua",
+        "admissionDates": "Admission Deadline: 2023-09-01",
+        "events": "Open House: 2023-09-12",
+        "researchHistory": "Leading research institution in Biology and Medicine.",
+        "sports": "Basketball, Hockey, Swimming",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Alessandro Romano",
+            "comment": "Top-notch Biology and Medicine programs. Professors are experts in their fields. The Open House event provided valuable insights into research opportunities!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Anna Esposito",
+            "comment": "Impressive medical facilities. Professors are supportive and approachable. Enjoyed playing basketball and hockey with friends in my leisure time.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Luca Ricci",
+            "comment": "Exceptional research facilities. The campus environment is conducive to learning. Swimming is my favorite stress-reliever after long study sessions.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b8f",
+        "collegeImage": "https://images8.alphacoders.com/109/1095886.jpg",
+        "collegeName": "University of Turin",
+        "admissionDates": "Admission Deadline: 2023-11-01",
+        "events": "Career Workshop: 2023-10-05",
+        "researchHistory": "Advancing research in Business and Economics.",
+        "sports": "Volleyball, Football, Rugby",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Chiara Martini",
+            "comment": "Cutting-edge Business and Economics programs. Professors are knowledgeable and supportive. The Career Workshop was insightful and beneficial for future prospects!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Laura Ferrari",
+            "comment": "Strong focus on practical applications. Campus ambiance encourages intellectual growth. Volleyball and football games are exhilarating to watch.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Alessandro Romano",
+            "comment": "Innovative research opportunities. Diverse international community. Rugby and football teams bring a strong sense of camaraderie and school spirit.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b91",
+        "collegeImage": "https://wallpaperaccess.com/full/2137304.jpg",
+        "collegeName": "University of Verona",
+        "admissionDates": "Admission Deadline: 2023-10-30",
+        "events": "Art Exhibition: 2023-10-22",
+        "researchHistory": "Renowned for artistic and creative expression.",
+        "sports": "Rugby, Football, Cricket",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Elena Bianchi",
+            "comment": "Inspiring artistic atmosphere. Professors nurture creative talents. The Art Exhibition showcased diverse artworks, and the campus felt like an artistic sanctuary!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Alessandro Romano",
+            "comment": "A haven for creative minds. Loved exploring various art forms. Rugby and football teams bring great energy to campus.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Marco Rossi",
+            "comment": "Highly recommend for artistic souls. Professors encourage unique expressions. The Football and Cricket matches add excitement to campus life.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b8b",
+        "collegeImage": "https://univerlist.com/media/images/university/University-of-Bologna.jpg",
+        "collegeName": "University of Bologna",
+        "admissionDates": "Admission Deadline: 2023-08-15",
+        "events": "Virtual College Fair: 2023-09-05",
+        "researchHistory": "Pioneering research in Computer Science and Engineering.",
+        "sports": "Football, Rugby, Cricket",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Chiara Martini",
+            "comment": "Cutting-edge Computer Science and Engineering programs. Professors are experts in their fields. The Virtual College Fair was informative and engaging!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Giuseppe Moretti",
+            "comment": "Innovative research opportunities. Campus facilities support hands-on learning. Rugby and cricket matches create a lively campus environment.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Francesco Russo",
+            "comment": "Strong foundation in technology. Professors foster problem-solving skills. Football games unite students with an exciting school spirit.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b92",
+        "collegeImage": "https://wallpapercave.com/wp/wp2468650.jpg",
+        "collegeName": "University of Cagliari",
+        "admissionDates": "Admission Deadline: 2023-09-25",
+        "events": "Tech Symposium: 2023-10-01",
+        "researchHistory": "Pioneering advancements in Engineering and Technology.",
+        "sports": "Cricket, Football, Rugby",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Alice Johnson",
+            "comment": "Highly recommend for tech enthusiasts. Advanced labs and resources for hands-on learning. Rugby matches add a thrilling dimension to campus life!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Jane Smith",
+            "comment": "Pioneering research opportunities. Campus ambiance fosters collaboration. Enjoyed cricket and football matches, bringing the community together.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "John Doe",
+            "comment": "Cutting-edge Engineering and Technology programs. Professors are approachable and innovative. The Tech Symposium was enlightening and showcased groundbreaking projects.",
+            "rating": 4.7
+          }
+        ]
+    },
+    {
+        "_id": "64bbbf1f9f318bdbe0ee1b90",
+        "collegeImage": "https://media.unige.it/files/2023-06/UniGe%20Balbi5%20cortile.jpg",
+        "collegeName": "University of Genoa",
+        "admissionDates": "Rolling Admission",
+        "events": "Admission Deadline: 2023-10-15",
+        "researchHistory": "Leading the way in Chemistry and Materials Science.",
+        "sports": "Basketball, Hockey, Volleyball",
+        "reviews": [
+          {
+            "reviewId": "1",
+            "username": "Mark Johnson",
+            "comment": "Impressive research opportunities. Campus offers a great study environment. Volleyball matches are a delightful way to unwind!",
+            "rating": 4.2
+          },
+          {
+            "reviewId": "2",
+            "username": "Emily Adams",
+            "comment": "Highly recommend for science enthusiasts. The campus fosters a strong sense of community. Hockye and volleyball teams add excitement to student life.",
+            "rating": 4.5
+          },
+          {
+            "reviewId": "3",
+            "username": "Michael Lee",
+            "comment": "Excellence in Chemistry and Materials Science. Professors inspire with their expertise. Basketball and hockey facilities are top-notch for sports enthusiasts.",
+            "rating": 4.7
+          }
+        ]
+    }
+]

@@ -57,7 +57,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="login" className="flex items-center">
           Sign-In
         </a>
       </Typography>

@@ -1,7 +1,7 @@
 const Research = () => {
   return (
     <div>
-      <div className="my-20">
+      <div className="mt-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl">
         Research Papers.
@@ -11,10 +11,10 @@ const Research = () => {
         </p>
       </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center w-9/12 m-auto py-2 px-3 bg-[url('https://www.sagefrog.com/wp-content/uploads/2018/12/Trends-Image.jpg')] bg-cover">
-          <div className="w-full">
-            <ul className="w-full mx-auto">
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold ">
+        <div className="w-9/12 m-auto bg-[url('https://www.sagefrog.com/wp-content/uploads/2018/12/Trends-Image.jpg')] bg-cover">
+          <div className="w-full bg-black/75 py-2 px-3">
+            <ul className="mx-auto text-center">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white">
                 1.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -22,9 +22,9 @@ const Research = () => {
                 >
                   Research in Physics.
                 </a>
-                <span>Author: John Doe</span>
+                <span>Author: Kirk Borne</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 2.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -32,9 +32,9 @@ const Research = () => {
                 >
                   Environmental Sciences.
                 </a>
-                <span>Author: Sam Smith</span>
+                <span>Author: Dan Chiras</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 3.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -42,9 +42,9 @@ const Research = () => {
                 >
                   Biology and Medicine.
                 </a>
-                <span>Author: Christina Payne</span>
+                <span>Author: Kenneth Schaffner</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 4.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -52,9 +52,9 @@ const Research = () => {
                 >
                   Business and Economics.
                 </a>
-                <span>Author: Tyler Epps</span>
+                <span>Author: George Bacchetta</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 5.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -62,9 +62,9 @@ const Research = () => {
                 >
                   Research in Artistic Expression.
                 </a>
-                <span>Author: Robert Johnson</span>
+                <span>Author: Shaun McNiff</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 6.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -72,9 +72,9 @@ const Research = () => {
                 >
                   Research in Computer Science.
                 </a>
-                <span>Author: Devin Anders</span>
+                <span>Author: Charles Bachman</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 7.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -82,9 +82,9 @@ const Research = () => {
                 >
                   Engineering and Technology.
                 </a>
-                <span>Author: Saina</span>
+                <span>Author: Paulo Davim</span>
               </li>
-              <li className="cursor-pointer mb-2 pl-5 bg-[#f39761] py-2 rounded font-semibold  ">
+              <li className="cursor-pointer mb-2 pl-5 py-2 rounded font-semibold text-white ">
                 8.{" "}
                 <a
                   className="underline mr-4 text-blue-700"
@@ -92,7 +92,7 @@ const Research = () => {
                 >
                   Research in Chemistry Science.
                 </a>
-                <span>Author: Sarfaraj khan</span>
+                <span>Author: Currano Roth</span>
               </li>
             </ul>
           </div>

@@ -11,10 +11,11 @@ const College = ({ college }) => {
     _id,
     collegeImage,
     collegeName,
+    collegeRating,
     admissionDates,
     events,
+    research,
     researchHistory,
-    sports,
   } = college;
   const handleDetails = () => {
     if (!user) {
@@ -49,13 +50,16 @@ const College = ({ college }) => {
 
           <div className="mt-4">
             <h2 className="font-medium text-base md:text-2xl">{collegeName}</h2>
+            <p className="bg-[#e6671f] rounded inline-block text-center mt-2 px-4 text-xs leading-loose font-semibold text-white mb-5">
+                    Rate: {collegeRating}
+                  </p>
+            <p className="mt-2 text-gray-900">Nuber of Research: {research}</p>
             <p className="mt-2 text-gray-900">{researchHistory}</p>
           </div>
 
           <div className="grid grid-cols-1 grid-rows-3 gap-4 mt-8">
             <div className="mt-2 xl:mt-0 text-red-600">{admissionDates}</div>
             <div className="mt-2 xl:mt-0 ">Upcoming Events: {events}</div>
-            <div className="mt-2 xl:mt-0 ">Popular Sports: {sports}</div>
           </div>
 
           <div className="grid grid-cols-1 mt-8">

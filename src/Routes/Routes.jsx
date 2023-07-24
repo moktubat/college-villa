@@ -7,11 +7,13 @@ import Colleges from "../pages/Colleges.jsx/Colleges";
 import Admission from "../pages/Admission/Admission";
 import CollegeInfo from "../pages/Shared/College/CollegeInfo/CollegeInfo";
 import PrivateRoute from "./PrivateRouter/PrivateRouter";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
             path: '/',

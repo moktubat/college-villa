@@ -76,7 +76,7 @@ const Admission = () => {
                     color="blue"
                     className="font-medium"
                   >
-                    <Link to="/admitForm">
+                    <Link to="/applyForm">
                       <button className="border  p-3  font-bold duration-300 hover:text-blue-900 rounded-md">
                         Apply Now
                       </button>

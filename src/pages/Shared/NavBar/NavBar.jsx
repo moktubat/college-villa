@@ -63,7 +63,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="myCollege" className="flex items-center">
           My College
         </a>
       </Typography>

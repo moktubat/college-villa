@@ -8,6 +8,8 @@ import Admission from "../pages/Admission/Admission";
 import CollegeInfo from "../pages/Shared/College/CollegeInfo/CollegeInfo";
 import PrivateRoute from "./PrivateRouter/PrivateRouter";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ApplyForm from "../pages/ApplyForm/ApplyForm";
+import MyCollege from "../pages/MyCollege/MyCollege";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
         {
           path: '/collegeInfo/:id',
           element: <PrivateRoute><CollegeInfo></CollegeInfo></PrivateRoute>
+        },
+        {
+          path: '/applyForm',
+          element: <PrivateRoute><ApplyForm></ApplyForm></PrivateRoute>
+        },
+        {
+          path: '/myCollege',
+          element: <PrivateRoute><MyCollege></MyCollege></PrivateRoute>
         },
         {
           path: '/admission',

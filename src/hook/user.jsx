@@ -8,6 +8,6 @@ export const User = (user, url) => {
   };
 
   axios
-    .put(`http://localhost:5000/users/${user?.email}`, currentUser)
+    .put(`https://college-villa-server-side.vercel.app/users/${user?.email}`, currentUser)
     .then((data) => console.log(data));
 };

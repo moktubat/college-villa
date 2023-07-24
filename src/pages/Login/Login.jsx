@@ -5,8 +5,10 @@ import { FaGithub } from "react-icons/fa";
 import { User } from "../../hook/user";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useTitle from "../../hook/useTitle";
 
 const Login = () => {
+  useTitle(Login);
   const { googleSignIn, githubSignIn, signIn, resetPassword } =
     useContext(AuthContext);
 

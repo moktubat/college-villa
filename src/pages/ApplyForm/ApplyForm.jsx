@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const ApplyForm = () => {
+  useTitle("Apply Here");
     const { user, loading } = useContext(AuthContext);
   
     const [image, setImage] = useState("");
@@ -26,7 +28,7 @@ const ApplyForm = () => {
       };
   
       try {
-        const response = await fetch("http://localhost:5000/colleges", {
+        const response = await fetch("https://college-villa-server-side.vercel.app/colleges", {
           method: "POST",
           headers: {
             "content-type": "application/json",

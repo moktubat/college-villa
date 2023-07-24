@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, Typography } from "@material-tailwind/react";
+import useTitle from "../../hook/useTitle";
 
 const TABLE_HEAD = ["College Name", "Rating", "Admission Date", "Apply"];
 
 const Admission = () => {
+    useTitle("Admission");
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://college-villa-server-side.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

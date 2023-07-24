@@ -5,20 +5,22 @@ import { Carousel } from "@material-tailwind/react";
 import { Rating } from "@smastrom/react-rating";
 import qouteImg from "../../../../assets/quote.png";
 import '@smastrom/react-rating/style.css'
+import useTitle from "../../../../hook/useTitle";
 
 const CollegeInfo = () => {
+  useTitle("College Information"); 
   const { id } = useParams();
   const [viewCard, setViewCards] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/collegeInfo/${id}`)
+    fetch(`https://college-villa-server-side.vercel.app/collegeInfo/${id}`)
       .then((res) => res.json())
       .then((data) => setViewCards(data));
   }, [id]);
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/collegeInfo/${id}/review`)
+    fetch(`https://college-villa-server-side.vercel.app/collegeInfo/${id}/review`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [id]);

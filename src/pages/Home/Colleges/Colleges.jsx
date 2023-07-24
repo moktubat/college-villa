@@ -4,7 +4,7 @@ import College from "../../Shared/College/College";
 const Colleges = () => {
   const [colleges, setColleges] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://college-villa-server-side.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => setColleges(data.slice(0, 3)));
   }, []);

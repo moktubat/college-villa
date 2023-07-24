@@ -1,14 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useTitle from "../../hook/useTitle";
 
 const MyCollege = () => {
+    useTitle("My College");
+    useTitle("My College");
   const { user } = useContext(AuthContext);
 
   const [myColleges, setMyColleges] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myCollege?email=${user.email}`)
+    fetch(`https://college-villa-server-side.vercel.app/myCollege?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyColleges(data));
   }, []);

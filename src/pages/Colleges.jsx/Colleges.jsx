@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import College from "../Shared/College/College";
+import useTitle from "../../hook/useTitle";
 
 const Colleges = () => {
+  useTitle(Colleges);
   const [colleges, setColleges] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://college-villa-server-side.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => setColleges(data));
   }, []);

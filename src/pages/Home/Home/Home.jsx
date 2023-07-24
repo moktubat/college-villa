@@ -1,3 +1,4 @@
+import useTitle from "../../../hook/useTitle";
 import Banner from "../Banner/Banner";
 import Blog from "../Blog/Blog";
 import Colleges from "../Colleges/Colleges";
@@ -6,6 +7,7 @@ import Gallery from "../Gallery/Gallery";
 import Research from "../Research/Research";
 
 const Home = () => {
+    useTitle("Home");
     return (
         <div>
             <Banner></Banner>

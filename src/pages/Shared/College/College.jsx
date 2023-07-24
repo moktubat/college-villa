@@ -32,7 +32,7 @@ const College = ({ college }) => {
         }
       });
     } else {
-      navigate(`/college/${_id}`);
+      navigate(`/collegeInfo/${_id}`);
     }
   };
   return (

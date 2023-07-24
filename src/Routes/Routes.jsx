@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Colleges from "../pages/Colleges.jsx/Colleges";
 import Admission from "../pages/Admission/Admission";
+import CollegeInfo from "../pages/Shared/College/CollegeInfo/CollegeInfo";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
         {
           path: '/colleges',
           element: <Colleges></Colleges>
+        },
+        {
+          path: '/collegeInfo/:id',
+          element: <CollegeInfo></CollegeInfo>
         },
         {
           path: '/admission',
